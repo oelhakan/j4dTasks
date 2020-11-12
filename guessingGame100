@@ -1,0 +1,43 @@
+package guessing;
+
+import static java.lang.System.out;
+
+import java.util.*;
+
+public class GuessingGame {
+	
+	public static void main(String[] args) {
+		
+		Scanner keyboard = new Scanner(System.in);
+		int numberOfGuesses = 0;
+		int randomNumber = new Random().nextInt(100)+1;
+		out.println("*****************");
+		out.println("Welcome to the Guessing Game!");
+		out.println("*****************");
+		
+		out.print("Enter an integer number from 1 to 100");
+		out.println();
+		int inputNumber = keyboard.nextInt();
+		numberOfGuesses++;
+		
+		while(inputNumber > randomNumber) {
+			out.println();
+			out.println("Try Again!");
+			out.println("(Hint : Try a smaller number)");
+			out.print("Enter an integer number from 1 to 100");
+			out.println();
+			inputNumber = keyboard.nextInt();
+			numberOfGuesses++;}
+		while(inputNumber < randomNumber) {
+				out.println();
+				out.println("Try Again!");
+				out.println("(Hint : Try a larger number)");
+				out.print("Enter an integer number from 1 to 100");
+				out.println();
+				inputNumber = keyboard.nextInt();
+				numberOfGuesses++;}
+		
+		
+		out.print("You Win After ");
+		out.println(numberOfGuesses + " Guesses!");
+		keyboard.close();}}
