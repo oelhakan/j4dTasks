@@ -1,0 +1,29 @@
+package testing;
+
+import static java.lang.System.out;
+
+public class FoodProduct {
+	String type;
+	double price;
+	int weight;
+	int numberOfServings;
+	
+	public void display() {
+		out.println("The type of the product is : " + type);
+    	out.println("The price of the product is : " + price); 
+    	out.println("The weight of the product is : " + weight); 
+    	out.println("The number of servings for the product is : " + numberOfServings);
+	}
+	
+	public double costPerServing() {
+		out.println("Price per Serving is : ");
+		out.println(price/numberOfServings);
+		return price/numberOfServings;
+		}
+	public double costPerGrams() {
+		out.println("Price per Grams is : ");
+		out.println(price/weight);
+		return price/weight;
+	}
+	
+}
