@@ -1,0 +1,18 @@
+package testing;
+
+public class UseFoodProduct {
+	
+	public static void main(String[] args) {
+	FoodProduct peachSlices = new FoodProduct();
+	peachSlices.type = "Peach Slices";
+	peachSlices.numberOfServings = 4;
+	peachSlices.price = 1.83;
+	peachSlices.weight = 500;
+	peachSlices.display();
+	peachSlices.costPerGrams();
+	peachSlices.costPerServing();
+
+	
+
+}
+}
