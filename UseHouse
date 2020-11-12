@@ -1,0 +1,81 @@
+package testing;
+
+import java.util.*;
+
+import static java.lang.System.out;
+
+public class DisplayAPlaceToLive {
+	public static void main(String[] args) {
+	APlaceToLive house1 = new APlaceToLive();
+	APlaceToLive house2 = new APlaceToLive();
+	APlaceToLive house3 = new APlaceToLive();
+	double area1 = 1.50 * 2.00;
+	double area2 = 4.00 * 2.60;
+	double area3 = 10.00 * 7.80;
+	house1.setAddress("Woloska 141A");
+	house1.setNumberOfBedrooms(2);
+	house1.setArea(area1);
+	house2.setAddress("Edwarda Wittiga 8");
+	house2.setNumberOfBedrooms(4);
+	house2.setArea(area2);
+	house3.setAddress("Aleja Krakowska 285");
+	house3.setNumberOfBedrooms(10);
+	house3.setArea(area3);
+	out.println("***HOUSE 1 DEATILS***");
+	out.println("Address : " + house1.getAdress() + ".");
+	out.println("Number of Bedrooms : " + house1.getNumberOfBedrooms() + ".");
+	out.println("Total Area : " + house1.getArea() + " Square Meters.");
+	out.println("******************************");
+	out.println();
+	out.println("***HOUSE 2 DETAILS***");
+	out.println("Address : " + house2.getAdress() + ".");
+	out.println("Number of Bedrooms : " + house2.getNumberOfBedrooms() + ".");
+	out.println("Total Area : " + house2.getArea() + " Square Meters.");
+	out.println("******************************");
+	out.println();
+	out.println("***HOUSE 3 DETAILS***");
+	out.println("Address : " + house3.getAdress() + ".");
+	out.println("Number of Bedrooms : " + house3.getNumberOfBedrooms() + ".");
+	out.println("Total Area : " + house3.getArea() + " Square Meters.");
+	out.println();
+	out.println("Enter The Number of The House (1-3) You're Interested in to See the Costs");
+	int inputNumber;
+	Scanner keyboard = new Scanner(System.in);
+	inputNumber = keyboard.nextInt();
+	if(inputNumber < 1 || inputNumber > 3) {
+		out.println("INVALID DATA");
+		out.println("Restart the Program and Enter an Integer between 1 and 3.");
+		System.exit(0);
+	}
+	
+	switch(inputNumber){
+	case 1:
+		out.println("Enter Your Offer for the House to See Cost/Square Meter and Cost/Number of Bedrooms");
+		double budget = keyboard.nextDouble();
+		out.println("Cost per Bedroom for the House is : " + budget/2);
+		out.println("Cost per Square Meter for the House is : " + budget/area1);
+		System.exit(0);
+		break;
+	case 2:
+		out.println("Enter Your Offer for the House to See Cost/Area and Cost/Number of Bedrooms");
+		double budget2 = keyboard.nextDouble();
+		out.println("Cost per Bedroom for the House is : " + budget2/4);
+		out.println("Cost per Square Meter for the House is : " + budget2/area2);
+		System.exit(0);
+		break;
+	case 3:
+		out.println("Enter Your Budget for the House to See Cost/Area and Cost/Number of Bedrooms");
+		double budget3 = keyboard.nextDouble();
+		out.println("Cost per Bedroom for the House is : " + budget3/10);
+		out.println("Cost per Square Meter for the House is : " + budget3/area3);
+		System.exit(0);
+		break;
+	default:
+		out.println("INVALID DATA - EXITING THE PROGRAM");
+		keyboard.close();
+		System.exit(0);
+	}
+	keyboard.close();	
+
+}
+}
