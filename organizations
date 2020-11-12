@@ -1,0 +1,27 @@
+package testing;
+
+import java.util.*;
+
+import static java.lang.System.out;
+
+public class Organizations {
+	String name;
+	double annualRevenue;
+	boolean nonProfit;
+	
+	public void display() {
+		out.println("Company name: ");
+		out.println(name);
+		out.println("Annual Revenue: ");
+		out.println(annualRevenue);
+		out.println("Is the Company Non-Profit? :");
+		out.println(nonProfit);
+	}
+	
+	public double taxCalculate(double percentageRate) {
+		out.println(annualRevenue * percentageRate / 100.00);
+		return annualRevenue * percentageRate / 100.00;
+		
+		
+	}
+	}
