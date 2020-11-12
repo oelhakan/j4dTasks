@@ -1,0 +1,22 @@
+package factorial;
+
+import java.util.*;
+
+import static java.lang.System.*;
+
+public class Factorial {
+		
+		public static void main(String[] args) {
+				Scanner keyboard = new Scanner(System.in);
+				int inputValue = keyboard.nextInt();
+				keyboard.close();
+				
+			long fact = 1;
+			 for (int i = 2; i <= inputValue; i++) {
+			        fact = fact * i;
+			    }
+			 out.println(fact);
+			
+		}
+	}
+
