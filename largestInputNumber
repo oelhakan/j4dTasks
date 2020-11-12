@@ -1,0 +1,57 @@
+package inputSum;
+ 
+import static java.lang.System.*;
+ 
+import java.util.*;
+ 
+public class SumInput {
+  //NON INTEGER INPUTS BREAK THE CODE
+    public static void main(String[] args) {
+        
+        out.println("Welceme to the Largest Positive Number Calculator!");
+        out.println("Enter Positive Integer Values to Calculate!");
+        out.println("Enter a Negative Integer or 0 to Exit the Program!");
+        
+    	
+    	
+    	Scanner keyboard = new Scanner(System.in);
+    	
+    	
+    	int inputNumber = keyboard.nextInt();
+        int maxNumber = 0;
+        int caseNumber = 0;
+        int whileCondition = 1;
+      while(true) {  
+        if(inputNumber<=0) {
+        	caseNumber = 1;
+        	
+        }else if(inputNumber>0 && inputNumber > maxNumber) {
+        	caseNumber = 2;
+        	maxNumber = inputNumber;
+        	}else if(inputNumber>0 && inputNumber <= maxNumber) {
+            	caseNumber = 2;
+            	}
+        
+        switch(caseNumber){
+        case 1:
+        	System.out.println("No Valid Data - Exiting Program");
+        	System.exit(0);
+        	break;
+        case 2:
+        	System.out.println("Current Max Value Is : " + maxNumber);
+        	System.out.println("Enter a Positive Integer Value to Continue");
+        	System.out.println("Enter a Negative Integer or Zero to Exit the Program");
+       		inputNumber = keyboard.nextInt();
+        case 3:
+        	System.out.println("Current Max Value Is : " + maxNumber);
+        	System.out.println("Enter a Positive Integer Value to Continue");
+        	System.out.println("Enter a Negative Integer or Zero to Exit the Program");
+        	inputNumber = keyboard.nextInt();
+        	}
+        	
+        }
+        
+      } 
+ 
+    
+}
