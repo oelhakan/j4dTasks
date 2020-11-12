@@ -1,0 +1,48 @@
+package testing;
+
+import java.util.*;
+
+import static java.lang.System.out;
+
+public class UseOrganizations {
+	
+	public static void main(String[] args) {
+	
+	Organizations company1 = new Organizations();
+	Organizations company2 = new Organizations();
+	Organizations company3 = new Organizations();
+	company1.name = "Xiaomi Corporation";
+	company2.name = "Apple Computer Inc";
+	company3.name = "American Red Cross";
+	company1.annualRevenue = 31113864587.00;
+	company2.annualRevenue = 261700000000.00;
+	company3.annualRevenue= 0;
+	company1.nonProfit = false;
+	company2.nonProfit = false;
+	company3.nonProfit = true;
+	double nonProfitTax = 2.00;
+	double profitTax = 10.00;
+	
+	company1.display();
+	
+	out.println("This company is required to pay an annual tax of : $");
+	
+	company1.taxCalculate(profitTax);
+	
+	company2.display();
+	
+	out.println("This company is required to pay an annual tax of : $");
+	
+	company2.taxCalculate(profitTax);
+	
+	company3.display();
+	
+	out.println("This company is required to pay an annual tax of : $");
+	
+	company3.taxCalculate(nonProfitTax);
+	
+	
+	
+			
+}
+}
